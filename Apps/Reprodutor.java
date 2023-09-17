@@ -10,6 +10,17 @@ public class Reprodutor {
 	private boolean ispause;
 	private boolean isPlaying;
 
+	private boolean isAppSelected ;
+
+	public boolean isAppSelected() {
+		return isAppSelected;
+	}
+
+	public void setAppSelected(boolean isAppSelected) {
+		this.isAppSelected = isAppSelected;
+		
+	}
+
 	public Reprodutor() {
 
 		_musica = new ArrayList<>();
@@ -20,6 +31,8 @@ public class Reprodutor {
 		_musica.add(3, new Musica("GTA San Andreas", 3));
 		_musica.add(4, new Musica("Riders on the Storm", 4));
 		_musica.add(5, new Musica("Enemy", 5));
+		isAppSelected =false;
+	
 
 	}
 

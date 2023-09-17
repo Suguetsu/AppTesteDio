@@ -1,6 +1,5 @@
 package Apps;
 
-
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -9,11 +8,21 @@ import Objetos.Contato;
 public class AparelhoTelefonico {
 
     private Map<String, Contato> mapContato;
-    //private List<Mensagens> msn;
+    private boolean isAppSelected;
+    // private List<Mensagens> msn;
 
     public AparelhoTelefonico() {
 
-        this.mapContato = new TreeMap<>(mapContato);
+        this.mapContato = new TreeMap<>();
+        isAppSelected =false;
+    }
+
+    public boolean isAppSelected() {
+        return isAppSelected;
+    }
+
+    public void setAppSelected(boolean isAppSelected) {
+        this.isAppSelected = isAppSelected;
     }
 
     /**
@@ -22,7 +31,7 @@ public class AparelhoTelefonico {
      * @param nome
      * @param telefone
      */
-    public void AdicionarContato(String nome, int telefone) {
+    public void AdicionarContato(String nome, String telefone) {
 
         mapContato.put(nome, new Contato(nome, telefone));
 
@@ -48,13 +57,13 @@ public class AparelhoTelefonico {
 
     }
 
-    public String Ligar(int numero) {
+    public String LigarNumero(String numero) {
 
         if (!mapContato.isEmpty())
 
             for (Contato c : mapContato.values()) {
 
-                if (c.GetNumero() == numero)
+                if (c.GetNumero().equals(numero))
                     return "Ligando para " + c.GetNome();
 
             }

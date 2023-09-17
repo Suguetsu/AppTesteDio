@@ -11,8 +11,19 @@ public class Navegador {
 	private boolean isPageOn = false;
 	private int novaPagina = 0;
 
+	private boolean isAppSelected;
+
+	public boolean isAppSelected() {
+		return isAppSelected;
+	}
+
+	public void setAppSelected(boolean isAppSelected) {
+		this.isAppSelected = isAppSelected;
+	}
+
 	public Navegador() {
 		this._navegador = new ArrayList<>();
+		isAppSelected=false;
 
 	}
 

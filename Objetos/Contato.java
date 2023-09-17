@@ -2,26 +2,24 @@ package Objetos;
 
 public class Contato {
 
-	private int numero;
+	private String numero;
 
 	private String nome;
 
-	public Contato(String nome, int numero) {
+	public Contato(String nome, String numero) {
 
 		this.nome = nome;
 		this.numero = numero;
 
 	}
 
-	
-	public int GetNumero() {
+	public String GetNumero() {
 		return numero;
 	}
 
 	public String GetNome() {
 		return nome;
 	}
-
 
 	@Override
 	public int hashCode() {
@@ -30,7 +28,6 @@ public class Contato {
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -49,12 +46,9 @@ public class Contato {
 		return true;
 	}
 
-
 	@Override
 	public String toString() {
 		return "Contato [numero=" + numero + ", nome=" + nome + "]";
 	}
-
-	
 
 }
